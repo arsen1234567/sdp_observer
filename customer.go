@@ -3,13 +3,14 @@ package main
 import "fmt"
 
 type Customer struct {
-	id string
+	name  string
+	phone string
 }
 
 func (c *Customer) update(itemName string) {
-	fmt.Printf("Sending email to customer %s for item %s\n", c.id, itemName)
+	fmt.Printf("Item %s is available, dear %s\n", itemName, c.name)
 }
 
-func (c *Customer) getID() string {
-	return c.id
+func (c *Customer) getPhone() string {
+	return c.phone
 }

@@ -2,13 +2,13 @@ package main
 
 func main() {
 
-	shirtItem := newItem("Nike Shirt")
+	desirableItem := newItem("Adidas Sneakers")
 
-	observerFirst := &Customer{id: "abc@gmail.com"}
-	observerSecond := &Customer{id: "xyz@gmail.com"}
+	customer1 := &Customer{name: "Arsen", phone: "87073047764"}
+	customer2 := &Customer{name: "Sultan", phone: "87778765677"}
 
-	shirtItem.register(observerFirst)
-	shirtItem.register(observerSecond)
+	desirableItem.register(customer1)
+	desirableItem.register(customer2)
 
-	shirtItem.updateAvailability()
+	desirableItem.updateAvailability()
 }
